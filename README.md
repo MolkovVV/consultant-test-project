@@ -46,14 +46,6 @@ mvn clean test -Dheadless=true -Dparallel.enabled=true -Dparallel.threads=4
 mvn allure:serve
 ```
 
-### IDEA
-
-Для Allure `@Step` в Page Object добавьте VM options в Run Configuration:
-
-```
--javaagent:"%PATH_TO%\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar"
-```
-
 ## BrowserBinaryResolver
 
 Порядок поиска бинарника:
@@ -82,3 +74,4 @@ src/test/java/com/consultant/
 - `@Execution(CONCURRENT)` на тест-классах
 - Параллелизм включается через `-Dparallel.enabled=true`
 - Для CI рекомендуется `parallel.threads` = число CPU / 2
+
